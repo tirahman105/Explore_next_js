@@ -1,3 +1,5 @@
+import Sidebar from "./Sidebar";
+
 export const metadata = {
     title: "AnonnoTa | Dashboard",
     description: "Spread your business with AnonnoTa",
@@ -6,8 +8,8 @@ export const metadata = {
 
 const DashboardLayout = ({children}) => {
     return (
-        <div>
-           <div>Sidebar</div>
+        <div className="flex container mx-auto">
+           <Sidebar></Sidebar>
             {children}
         </div>
     );
