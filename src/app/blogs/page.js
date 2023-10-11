@@ -1,4 +1,5 @@
 // "use client"
+import loadBlogData from "@/utils/loadBlogData";
 import Link from "next/link";
 
 import { useRouter } from "next/navigation";
@@ -29,10 +30,13 @@ export const metadata = {
 const BlogsPage = async () => {
   // const router = useRouter();
 
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    cache: "force-cache",
-  });
-  const blogs = await res.json();
+  // const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+  //   cache: "force-cache",
+  // });
+  // const blogs = await res.json();
+
+const blogs = await loadBlogData();
+
   return (
     <div className="container mx-auto">
       <h1>Blogs Page</h1>
