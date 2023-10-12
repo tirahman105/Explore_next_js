@@ -25,7 +25,7 @@ const {id, title, body} = await loadSingleBlogData(params.id);
         <div className='p-20 bg-slate-100 m-20'>
            
 
-            <h1 className='text-center text-3xl font-bold'>{title}</h1>
+            <h1 className='text-center text-3xl font-bold'>Title:{title}</h1>
             <p className='p-20 '>{body}</p>
         </div>
     );
