@@ -1,5 +1,6 @@
 // 'use client'
 
+import loadBlogData from '@/utils/loadBlogData';
 import loadSingleBlogData from '@/utils/loadSingleBlogData';
 // import { useParams, useSearchParams } from 'next/navigation';
 
@@ -10,6 +11,14 @@ export const generateMetadata =async ({params}) => {
     title: title,
     };
 };
+
+export const generateStaticParams = async  () => {
+    const blogs = await loadBlogData();
+
+    return blogs.map((id) => ({
+        id: id.toString(),
+    }))
+}
 
 const SingleBlog = async ({params}) => {
 // const [year, id] = params.segments || [];

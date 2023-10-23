@@ -18,6 +18,19 @@ const HomePage = () => {
 
     {/* placeholder in image  */}
     <Image width={600}  src={image1} placeholder="blur" alt='image'></Image>
+    <div className="p-10">
+      <div className="grid grid-cols-3 gap-4">
+        <div className="h-24 bg-gray-200 p-10">
+          <h1>This is card test 1 </h1>
+        </div>
+        <div className="h-24 bg-gray-200 p-10">
+          <h1>This is card test 2</h1>
+        </div>
+        <div className="h-24 bg-gray-200 p-10">
+          <h1>This is card test 3</h1>
+        </div>
+      </div>
+    </div>
     </main>
   )
 }
